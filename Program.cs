@@ -6,7 +6,8 @@ namespace SOLID.NET
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // S (Single Responsible Principle)
+            SRP.Starter.Run();
         }
     }
 }
