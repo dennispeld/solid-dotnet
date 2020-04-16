@@ -12,18 +12,7 @@ namespace SOLID.NET.SRP
         {
             Init();
 
-            Scrapbook scrapbook = new Scrapbook("My scrapbook", 300);
-
             foreach (var entry in entries) {
-                scrapbook.AddEntry(entry);
-            }
-
-            Display(scrapbook);
-        }
-
-        private static void Display(Scrapbook scrapbook)
-        {
-            foreach (var entry in scrapbook.entries) {
                 Console.WriteLine(entry.ToString());
             }
         }

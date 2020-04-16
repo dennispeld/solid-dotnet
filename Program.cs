@@ -8,6 +8,9 @@ namespace SOLID.NET
         {
             // S (Single Responsible Principle)
             SRP.Starter.Run();
+
+            // O (Open-Closed Principle)
+            OCP.Starter.Run();
         }
     }
 }
