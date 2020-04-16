@@ -11,6 +11,9 @@ namespace SOLID.NET
 
             // O (Open-Closed Principle)
             OCP.Starter.Run();
+
+            // L (Liskov Substitution Principle)
+            LSP.Starter.Run();
         }
     }
 }
