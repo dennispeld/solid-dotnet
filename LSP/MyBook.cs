@@ -27,7 +27,7 @@ namespace SOLID.NET.LSP
             if (typeof(MyBook) == this.GetType())
                 Console.WriteLine($"You have opened a table of content of the book \"{Title}\" by {Author}.");
             else
-                Console.WriteLine($"There is no table of content in the {this.Title}.");
+                Console.WriteLine($"There is no table of content in the {Title}.");
         }
     }
 }
