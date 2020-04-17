@@ -22,7 +22,7 @@ namespace SOLID.NET.LSP
         {
             return new List<MyBook>() {
                 new MyBook("The beach", "Alex Garland", 254),
-                new MyJournal("My textbook", 150, true) 
+                new MyJournal("Journal", 150, true)
             };
         }
     }

@@ -12,5 +12,13 @@ namespace SOLID.NET.LSP
         {
             HasScribbles = hasScribbles;
         }
+
+        public override void OpenPage(int page)
+        {
+            if (Pages > page)
+                Console.WriteLine($"You opened a page {page} of the journal.");
+            else
+                Console.WriteLine($"There is no page {page} in the journal.");
+        }
     }
 }
