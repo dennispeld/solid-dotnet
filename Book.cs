@@ -14,5 +14,8 @@ namespace SOLID.NET
             Title = title;
             Pages = pages;
         }
+
+        public abstract void OpenPage(int page);
+        public abstract void OpenTableOfContent();
     }
 }

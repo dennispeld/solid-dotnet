@@ -21,5 +21,18 @@ namespace SOLID.NET.SRP
         {
             entries.RemoveAt(index);
         }
+
+        public override void OpenPage(int page)
+        {
+            if (Pages > page)
+                Console.WriteLine($"You opened a page {page} of the scrapbook.");
+            else
+                Console.WriteLine($"There is no page {page} if the scrapbook.");
+        }
+
+        public override void OpenTableOfContent()
+        {
+            Console.WriteLine($"The scrapbook doesn't have a table of content");
+        }
     }
 }
