@@ -7,10 +7,10 @@ namespace SOLID.NET.SRP
 {
     public class ScrapbookManager
     {
-        public void SaveToFile(Scrapbook scrapbook, string filename, bool overwrite = false)
+        public void SaveToFile(List<Entry> scrapbook, string filename, bool overwrite = false)
         {
             if (overwrite || !File.Exists(filename)) {
-                foreach (var entry in scrapbook.entries)
+                foreach (var entry in scrapbook)
                     File.AppendAllText(filename, entry.ToString() + "\r\n");
             }
         }

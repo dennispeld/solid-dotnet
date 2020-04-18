@@ -1,25 +1,27 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SOLID.NET.SRP
 {
-    public class Scrapbook: Book, IWritable
+    public class Scrapbook<T>: Book, IWritable<T>, IEnumerable<T>
+        where T: Entry
     {
-        public readonly List<Entry> entries = new List<Entry>();
-        public static int count = 0;
+        public readonly List<T> _scrapbook = new List<T>();
+        public int count = 0;
 
         public Scrapbook(string title, int pages): base(title, pages) { }
 
-        public void AddEntry(Entry entry)
+        public void Add(T entry)
         {
             entry.Content = $"{++count}: {entry.Content}";
-            entries.Add(entry);
+            _scrapbook.Add(entry);
         }
 
-        public void RemoveEntry(int index)
+        public void Erase(int index)
         {
-            entries.RemoveAt(index);
+            _scrapbook.RemoveAt(index);
         }
 
         public override void OpenPage(int page)
@@ -34,5 +36,12 @@ namespace SOLID.NET.SRP
         {
             Console.WriteLine($"The scrapbook doesn't have a table of content");
         }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return ((IEnumerable<T>)_scrapbook).GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
