@@ -6,14 +6,20 @@ namespace SOLID.NET
     {
         static void Main(string[] args)
         {
-            // S (Single Responsible Principle)
+            Console.WriteLine("S (Single Responsible Principle):");
             SRP.Starter.Run();
 
-            // O (Open-Closed Principle)
+            Console.WriteLine();
+            Console.WriteLine("O (Open-Closed Principle):");
             OCP.Starter.Run();
 
-            // L (Liskov Substitution Principle)
+            Console.WriteLine();
+            Console.WriteLine("L (Liskov Substitution Principle):");
             LSP.Starter.Run();
+
+            Console.WriteLine();
+            Console.WriteLine("I (Interface Segregation Principle):");
+            ISP.Starter.Run();
         }
     }
 }
