@@ -20,6 +20,10 @@ namespace SOLID.NET
             Console.WriteLine();
             Console.WriteLine("I (Interface Segregation Principle):");
             ISP.Starter.Run();
+
+            Console.WriteLine();
+            Console.WriteLine("D (Dependency Inversion Principle):");
+            DIP.Starter.Run();
         }
     }
 }
